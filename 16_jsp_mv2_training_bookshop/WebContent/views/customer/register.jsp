@@ -82,6 +82,15 @@
 			
 		}
 	
+		var isValidId = false;
+		function checkFormData(){
+			if (!isValidId) {
+				alert("아이디 중복체크를 확인하세요.");
+				$("#memberId").focus();
+				return false;
+			}
+		}
+		
 		$().ready(function(){
 			
 			$("form").submit(function(){
@@ -89,17 +98,13 @@
 				$("[name='birthDt']").val(birthDt);
 			});
 			
-		});
-		
-		$().ready(function(){
-			
 			$("#checkId").click(function(){
 				
 				$.ajax({
 					
 					url : "idCheck",
 					type: "get",
-					data : {"memberId" : $("#memberId").val()},
+					data : {"memberId" : $("[name='memberId']").val()},
 					success : function(result){
 						
 						//중복된 아이디가 있을 때
@@ -119,9 +124,8 @@
 				});
 				
 			});
-			
 		});
-
+		
 	</script>
 </head>
 <body>
@@ -192,7 +196,7 @@
     <!-- Checkout Section Begin -->
     <section class="checkout spad">
         <div class="container">
-            <form action="register" method="post" class="checkout__form">
+            <form action="register" method="post" class="checkout__form" onsubmit="return checkFormData();">
                     <div class="col-lg-8">
                         <h5>회원가입</h5>
                         <div class="row">
@@ -200,7 +204,7 @@
                                 <div class="checkout__form__input">
                                     <p>아이디 </p>
                                     <input type="text" name="memberId" placeholder="아이디를 입력하세요.">
-                                    <input type="button" style="width:70pt;height:20pt;" name="checkId" value="중복 확인">
+                                    <input type="button" style="width:70pt;height:20pt;" id="checkId" value="중복 확인">
                                 </div>
                                 <div class="checkout__form__input">
                                     <p>비밀번호 </p>

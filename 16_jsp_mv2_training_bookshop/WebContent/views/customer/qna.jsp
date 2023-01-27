@@ -141,148 +141,24 @@
         </div>
     </header>
     <!-- Header Section End -->
-
-    <!-- Breadcrumb Begin -->
     <div class="breadcrumb-option">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
                         <a href="bookList"><i class="fa fa-home"></i> Home</a>
-                        <span>Shop</span>
+                        <span>FAQ</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
-
-    <!-- Shop Section Begin -->
-    <section class="shop spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="shop__sidebar">
-                        
-                        <div class="sidebar__filter">
-                            <div class="section-title">
-                                <h4>Price</h4>
-                            </div>
-                            <div class="filter-range-wrap">
-                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                data-min="18" data-max="85"></div>
-                                <div class="range-slider">
-                                    <div class="price-input">
-                                        <p>Price:</p>
-                                        <input type="text" id="minamount">
-                                        <input type="text" id="maxamount">
-                                    </div>
-                                </div>
-                            </div>
-                            <br><a href="#">검색</a>
-                        </div>
-                        <div class="sidebar__sizes">
-                            <div class="section-title">
-                                <h4>Category</h4>
-                            </div>
-                            <div class="size__list">
-                                <label for="xxs">
-                                    new
-                                    <input type="checkbox" id="xxs">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="xs">
-                                    steady
-                                    <input type="checkbox" id="xs">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="xss">
-                                    best
-                                    <input type="checkbox" id="xss">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="sidebar__color">
-                            <div class="section-title">
-                                <h4>Shop by size</h4>
-                            </div>
-                            <div class="size__list color__list">
-                                <label for="black">
-                                    Blacks
-                                    <input type="checkbox" id="black">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="whites">
-                                    Whites
-                                    <input type="checkbox" id="whites">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="reds">
-                                    Reds
-                                    <input type="checkbox" id="reds">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="greys">
-                                    Greys
-                                    <input type="checkbox" id="greys">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="blues">
-                                    Blues
-                                    <input type="checkbox" id="blues">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="beige">
-                                    Beige Tones
-                                    <input type="checkbox" id="beige">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="greens">
-                                    Greens
-                                    <input type="checkbox" id="greens">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label for="yellows">
-                                    Yellows
-                                    <input type="checkbox" id="yellows">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-9">
-                    <div class="row">
-                        <c:forEach var="bookDTO" items="${bookList }">
-                        	<div class="col-lg-4 col-md-6">
-                            	<div class="product__item">
-	                                <div class="product__item__pic set-bg" data-setbg="bootstrap/img/book/${bookDTO.imgNm }">
-	                                     <c:choose>
-	                                    	<c:when test="${bookDTO.sort eq 'new' }"> <div class="label new">New</div></c:when>
-	                                    	<c:when test="${bookDTO.sort eq 'best' }">  <div class="label sale">Best</div></c:when>
-	                                    	<c:when test="${bookDTO.sort eq 'steady' }"> <div class="label stockout stockblue">Steady</div></c:when>
-	                                    </c:choose>
-	                                    <ul class="product__hover">
-	                                        <li><a href="bootstrap/img/book/${bookDTO.imgNm }" class="image-popup"><span class="arrow_expand"></span></a></li>
-	                                        <li><a href="javascript:orderBook(${bookDTO.bookCd })"><span class="icon_bag_alt"></span></a></li>
-	                                    </ul>
-	                                </div>
-	                                <div class="product__item__text">
-	                                    <a href="bookDetail?bookCd=${bookDTO.bookCd }">
-		                                    <h6>${bookDTO.bookNm }</h6>
-		                                    <div class="product__price"><fmt:formatNumber value="${bookDTO.price }"/> 원</div>
-	                                    </a>
-	                                </div>
-	                           </div>
-                        	</div>
-                        </c:forEach>
-                     </div>   
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Shop Section End -->
+	<br><br>
+	<section>
+	
+	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	<textarea rows="20" cols="50"></textarea>
+	</section>
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -311,7 +187,7 @@
                             <li><a href="#">About</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="qnA">FAQ</a></li>
+                            <li><a href="QnA">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
