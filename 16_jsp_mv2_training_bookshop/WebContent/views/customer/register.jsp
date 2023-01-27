@@ -90,6 +90,37 @@
 			});
 			
 		});
+		
+		$().ready(function(){
+			
+			$("#checkId").click(function(){
+				
+				$.ajax({
+					
+					url : "idCheck",
+					type: "get",
+					data : {"memberId" : $("#memberId").val()},
+					success : function(result){
+						
+						//중복된 아이디가 있을 때
+						if (result == "isDuple") {
+							alert("사용중인 아이디 입니다.");
+							isValidId = false;
+						}
+						
+						//중복된 아이디가 없을 때
+						else {
+							alert("사용할 수 있는 아이디 입니다.");
+							isValidId = true;
+						}
+						
+					}
+					
+				});
+				
+			});
+			
+		});
 
 	</script>
 </head>
@@ -169,6 +200,7 @@
                                 <div class="checkout__form__input">
                                     <p>아이디 </p>
                                     <input type="text" name="memberId" placeholder="아이디를 입력하세요.">
+                                    <input type="button" style="width:70pt;height:20pt;" name="checkId" value="중복 확인">
                                 </div>
                                 <div class="checkout__form__input">
                                     <p>비밀번호 </p>
