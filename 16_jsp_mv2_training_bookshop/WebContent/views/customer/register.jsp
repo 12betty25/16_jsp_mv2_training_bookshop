@@ -83,13 +83,23 @@
 		}
 	
 		var isValidId = false;
+		var isSamePw = false;
+		
 		function checkFormData(){
 			if (!isValidId) {
 				alert("아이디 중복체크를 확인하세요.");
 				$("#memberId").focus();
 				return false;
 			}
+			
+			if (!isSamePw){
+				alert("비밀번호를 확인해주세요.");
+				$("#checkPW").focus();
+				return false;
+			}
 		}
+		
+		
 		
 		$().ready(function(){
 			
@@ -97,6 +107,8 @@
 				var birthDt = $("#birthY").val() + "-" + $("#birthM").val() + "-" + $("#birthD").val();
 				$("[name='birthDt']").val(birthDt);
 			});
+			
+			
 			
 			$("#checkId").click(function(){
 				
@@ -124,7 +136,22 @@
 				});
 				
 			});
+			
+			$("#checkPw").blur(function(){
+				
+				if($("#passwd").val() == $("#checkPw").val()){
+					isSamePw == true;
+				}
+				else{
+					$("#msg").html("<span style='color:red;'>패스워드를 확인해주세요.</span>");
+					isSamePw = false;
+				}
+				
+			})
+			
 		});
+		
+		$("")
 		
 	</script>
 </head>
@@ -203,12 +230,17 @@
                             <div class="col-lg-12">
                                 <div class="checkout__form__input">
                                     <p>아이디 </p>
-                                    <input type="text" name="memberId" placeholder="아이디를 입력하세요.">
+                                    <input type="text" name="memberId" placeholder="아이디를 입력하세요." required>
                                     <input type="button" style="width:70pt;height:20pt;" id="checkId" value="중복 확인">
                                 </div>
                                 <div class="checkout__form__input">
                                     <p>비밀번호 </p>
-                                    <input type="password" name="passwd" placeholder="비밀번호를 입력하세요.">
+                                    <input type="password" name="passwd" id="passwd" placeholder="비밀번호를 입력하세요." required>
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>비밀번호 확인</p>
+                                    <input type="password" name="checkPw" id="checkPw" placeholder="비밀번호를 확인하세요." required>
+                                    <span id="msg"></span>
                                 </div>
                                 <div class="checkout__form__input">
                                     <p>이름 </p>

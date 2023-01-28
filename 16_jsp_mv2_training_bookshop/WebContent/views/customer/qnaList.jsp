@@ -153,13 +153,36 @@
             </div>
         </div>
     </div>
-	<br><br>
-	<section>
-	
-	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	<textarea rows="20" cols="50"></textarea>
-	</section>
-
+    <section class="checkout spad">
+        <div class="container">
+            <form action="register" method="post" class="checkout__form" onsubmit="return checkFormData();">
+                    <div class="col-lg-8">
+                        <h5>FAQ</h5>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="checkout__form__input">
+									<table border="1">
+										<tr>
+											<td width="500" height="20" align="center">제목</td>
+											<td width="200" align="center">작성일</td>
+										</tr>
+									</table>
+                             	</div>
+                             	<br>
+                             <div align="right">
+	                             <button type="submit" class="site-btn">글쓰기</button>
+                             </div>
+                        </div>
+                    </div>
+                  </div>
+               </form>
+            </div>
+        </section>
+        
+        
+        
+        
+        
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="container">
