@@ -4,10 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+
+import bookshop.dto.QNADTO;
 
 public class QNADAO {
 
@@ -45,5 +48,23 @@ public class QNADAO {
     }
 	
 	
+	public ArrayList<QNADTO> getQNAList(){
+		
+		ArrayList<QNADTO> qnaList = new ArrayList<QNADTO>();
+		
+		try {
+			getConnection();
+			
+			QNADTO qnaDTO = new QNADTO();
+			pstmt = conn.prepareStatement("SELECT * FROM LIST");
+			
+		} catch (Exception e) {
+			e.printStackTrace();	
+		} finally {
+			getClose();
+		}
+		
+		return qnaList;
+	}
 	
 }

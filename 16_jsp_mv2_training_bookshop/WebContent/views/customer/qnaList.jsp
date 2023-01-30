@@ -170,7 +170,7 @@
                              	</div>
                              	<br>
                              <div align="right">
-	                             <button type="submit" class="site-btn">글쓰기</button>
+	                             <button type="submit" class="site-btn" onclick="location.href='qNAWrite'">글쓰기</button>
                              </div>
                         </div>
                     </div>

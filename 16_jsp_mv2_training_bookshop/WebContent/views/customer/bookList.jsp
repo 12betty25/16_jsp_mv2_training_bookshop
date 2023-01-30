@@ -311,7 +311,7 @@
                             <li><a href="#">About</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="qnA">FAQ</a></li>
+                            <li><a href="qNAList">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
